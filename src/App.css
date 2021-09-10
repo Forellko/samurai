@@ -10,26 +10,6 @@
   /* grid-gap: 50px; */
 }
 
-header {
-  grid-area: header;
-  background-color: #43989b;
-}
-
-header img {
-  width: 60px;
-}
-
-nav {
-  grid-area: nav;
-  background-color: #43989b;
-  /* color: #ccd3cd; */
-}
-
-.content {
-  grid-area: content;
-  background-color: #90bdbe;
-}
-
 /* footer {
   grid-area: footer;
 } */
