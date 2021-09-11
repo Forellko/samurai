@@ -1,0 +1,22 @@
+.content {
+  display: grid;
+  grid-template-columns: 2fr 10fr;
+}
+
+.persons {
+  padding: 10px;
+}
+
+.person {
+}
+
+.person .active {
+  color: aquamarine;
+}
+
+.messages {
+  padding: 10px;
+}
+
+.message {
+}

@@ -9,16 +9,25 @@ import News from './components/Content/News/News';
 import Music from './components/Content/Music/Music';
 import Settings from './components/Content/Settings/Settings';
 
-function App() {
+function App({ personsData, messagesData, postsData }) {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
         <Header />
-        <Nav />
+        <Nav personsData={personsData} />
         <div className="app-wrapper-content">
-          {/* <Profile /> */}
-          <Route component={Profile} path="/Profile" />
-          <Route component={Dialogs} path="/Dialogs" />
+          <Route
+            render={() => {
+              return <Profile postsData={postsData} />;
+            }}
+            path="/Profile"
+          />
+          <Route
+            render={() => (
+              <Dialogs personsData={personsData} messagesData={messagesData} />
+            )}
+            path="/Dialogs"
+          />
           <Route component={News} path="/News" />
           <Route component={Music} path="/Music" />
           <Route component={Settings} path="/Settings" />

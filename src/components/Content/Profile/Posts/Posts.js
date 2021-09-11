@@ -2,18 +2,25 @@ import React from 'react';
 import classes from './Posts.module.css';
 import Post from './Post/Post';
 
-const Posts = () => {
+const Posts = ({ postsData }) => {
   return (
-    <div className="Posts">
+    <div className={classes.posts}>
       <div>
-        My posts
+        <h3>My posts</h3>
         <div>
-          <textarea></textarea>
-          <button>Add post</button>
+          <div>
+            <textarea></textarea>
+          </div>
+          <div>
+            <button>Add post</button>
+          </div>
         </div>
       </div>
-      <Post message="Hi, how are you" likes="5" />
-      <Post message="First post" likes="10" />
+      <div className={classes.items}>
+        {postsData.map(({ id, text, likes }) => {
+          return <Post text={text} likes={likes} />;
+        })}
+      </div>
     </div>
   );
 };

@@ -3,10 +3,18 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import state from './redux/state';
+
+const { postsData } = state.profilePage;
+const { personsData, messagesData } = state.dialogPage;
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App
+      personsData={personsData}
+      messagesData={messagesData}
+      postsData={postsData}
+    />
   </React.StrictMode>,
   document.getElementById('root')
 );
