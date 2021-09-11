@@ -10,6 +10,19 @@
   /* grid-gap: 50px; */
 }
 
+.app-wrapper-content {
+  grid-area: content;
+  background-color: #90bdbe;
+}
+
 /* footer {
   grid-area: footer;
 } */
+
+a,
+a:hover,
+a:visited,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
