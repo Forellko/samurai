@@ -1,12 +1,12 @@
 import React from 'react';
-import classes from './Link.module.css';
+import styles from './Link.module.css';
 import { NavLink } from 'react-router-dom';
 
 const Link = ({ path }) => {
   return (
     <nav>
-      <div className={classes.item}>
-        <NavLink to={`/${path}`} activeClassName={classes.activeLink}>
+      <div className={styles.item}>
+        <NavLink to={`/${path}`} activeClassName={styles.activeLink}>
           {path}
         </NavLink>
       </div>

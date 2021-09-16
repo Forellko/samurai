@@ -1,3 +1,5 @@
+import renderDOM from '../render';
+
 const personsData = [
   { id: '1', name: '1a' },
   { id: '2', name: '2b' },
@@ -24,6 +26,16 @@ const state = {
   profilePage: {
     postsData,
   },
+};
+
+export const addPost = (text) => {
+  const newPost = {
+    id: 5,
+    text,
+    likes: 0,
+  };
+  state.profilePage.postsData.push(newPost);
+  renderDOM(state);
 };
 
 export default state;

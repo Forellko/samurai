@@ -9,7 +9,7 @@ import News from './components/Content/News/News';
 import Music from './components/Content/Music/Music';
 import Settings from './components/Content/Settings/Settings';
 
-function App({ personsData, messagesData, postsData }) {
+function App({ personsData, messagesData, postsData, addPost }) {
   return (
     <BrowserRouter>
       <div className="app-wrapper">
@@ -18,7 +18,7 @@ function App({ personsData, messagesData, postsData }) {
         <div className="app-wrapper-content">
           <Route
             render={() => {
-              return <Profile postsData={postsData} />;
+              return <Profile postsData={postsData} addPost={addPost} />;
             }}
             path="/Profile"
           />
